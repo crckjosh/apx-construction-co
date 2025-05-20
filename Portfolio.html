@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APEX Construction - Portfolio</title>
+  <style>
+   body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color:rgba(0, 0, 0, 0.8);
+            background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGJsdXJ8ZW58MHx8fHwxNjg3NTY5NzA1&ixlib=rb-4.0.3&q=80&w=1080');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff;
+        }
+    header {
+      background-color:rgba(0, 0, 0, 0.8);
+      color: rgb(226, 133, 11);
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 5px;
+      font-size: 36px;
+    }
+
+    header p {
+      font-size: 18px;
+      color: #77501c;
+    }
+    .navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+        }
+    button {
+            color: rgb(114, 78, 36);
+            padding: 10px 20px;
+            border: none;
+            margin: 10px 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: gold;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: gold;
+            text-decoration: underline;
+            padding-left: 20px;
+            padding-right: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+    .owners {
+      text-align: center;
+      padding: 20px;
+      background-color:rgba(0, 0, 0, 0.8);
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .portfolio-section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .project {
+      background-color: rgba(0, 0, 0, 0.8);
+      margin-bottom: 40px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .project:hover {
+      transform: scale(1.02);
+    }
+
+    .project img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-content {
+      padding: 20px;
+    }
+
+    .project-content h3 {
+      margin-top: 0;
+      color: #222;
+    }
+
+    .project-content p {
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #724b1e;
+      color: rgb(241, 239, 237);
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    body {
+      margin: 0;
+      background-color: #111;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .project-group {
+      position: relative;
+      width: 300px;
+    }
+
+    .project-group img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .hover-modal {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.95);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transition: top 0.4s ease-in-out;
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    .hover-modal img {
+      max-width: 80%;
+      max-height: 70%;
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    }
+
+    .caption {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #ccc;
+    }
+
+    .active-modal {
+      top: 0;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>APEX Construction Company</h1>
+    <p>Professional, Reliable, and Innovative Building Solutions</p>
+  </header>
+  <div class="navbar">
+    <a href="C:\Users\Kelvin\Downloads\Documents\APX CONS LTD.htm">Home</a> |
+    <a href="C:\Users\Kelvin\Downloads\Documents\APEX CONTRUCTION LTD WEBSITE\portfolio.html">Portfolio</a> |
+    <a href="#products">Products</a> |
+    <a href="C:\Users\Kelvin\Downloads\Documents\APEX CONTRUCTION LTD WEBSITE\about APX CONT.html">About us</a> |
+    <a href="#location">Location</a> |
+    <a href="C:\Users\Kelvin\Downloads\Documents\APEX CONTRUCTION LTD WEBSITE\OUR SERVICES APX C.LTD.html">Services</a> |
+    <a href="C:\Users\Kelvin\Downloads\Documents\APEX CONTRUCTION LTD WEBSITE\cntact us apx.html">Contact</a>
+  </div>
+
+  <div class="owners">
+    <h3>
+    Founded and Managed by: Kelvin Mwangi & James Mwangi
+    </h3>
+  </div>
+
+  <section class="portfolio-section">
+    <div class="project">
+      <img src="https://houseplans-3d.com/wp-content/uploads/2023/12/Modern-House-Design-8x10-m-2storey-House-with-3Bedroom-front.jpg" alt="Modern House Project">
+      <div class="project-content">
+        <h3>Modern Two-Storey House</h3>
+        <p>A stylish and functional modern house with 3 bedrooms, an open-plan kitchen, and a spacious living area.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="https://www.thehousedesigners.com/images/plans/01/URD/bulk/6583/the-destination-front-rendering_m.webp" alt="Villa">
+      <div class="project-content">
+        <h3>Luxury Villa in Nairobi</h3>
+        <p>This 4-bedroom villa features a stunning facade, rooftop garden, and eco-friendly construction techniques.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="https://s3-us-west-2.amazonaws.com/prod.monsterhouseplans.com/uploads/images_plans/52/52-360/52-360e.webp" alt="Family Home">
+      <div class="project-content">
+        <h3>Family Home Development</h3>
+        <p>A residential project tailored for families, focusing on comfort, safety, and accessibility for all generations.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="C:\Users\Kelvin\Documents\IMG_20250407_113509.jpg" alt="Project Ongoing">
+      <div class="project-content">
+        <h3>Ongoing Project</h3>
+        <p>This is a project under construction which is Embu Mordern Market</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="https://cdnassets.hw.net/7b/56/82596d1f4b4aa203a422cb9b7d80/6123ee26572b4720be3869e13e72d7a9.jpg" alt="Futuristic Glass Home">
+      <div class="project-content">
+        <h3>Futuristic Glass Home</h3>
+        <p>This ultra-modern glass home uses smart technology, solar integration, and energy-efficient design elements.</p>
+      </div>
+  </section>
+
+  <footer>
+    &copy; 2025 APEX Construction Company. All rights reserved.
+  </footer>
+</body>
+</html>
+<!--                 </div>
+ -->
