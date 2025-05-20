@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APEX Blog</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #141414;
+      background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGJsdXJ8ZW58MHx8fHwxNjg3NTY5NzA1&ixlib=rb-4.0.3&q=80&w=1080');
+      color: #333;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
+    }
+
+    header {
+      background-color: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: #d4af37;
+      font-size: 2rem;
+    }
+
+    nav a {
+      color: #d4af37;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    section.blog-header {
+      background-color:rgba(0, 0, 0, 0.8);
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    section.blog-header h2 {
+      font-size: 2.5rem;
+      color: #d4af37;
+    }
+
+    section.blog-header p {
+      margin-top: 10px;
+      color: #ccc;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #1f1f1f;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card .content {
+      padding: 20px;
+    }
+
+    .card h3 {
+      color: #d4af37;
+      font-size: 1.25rem;
+    }
+
+    .card p {
+      margin-top: 10px;
+      color: #ccc;
+    }
+
+    .card button {
+      margin-top: 15px;
+      background: none;
+      border: none;
+      color: #ffa500;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      color: #777;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>APEX Construction</h1>
+    <nav>
+       <a href="apx construction co.html">Home</a> |
+                <a href="Portfolio.html">Portfolio</a> |
+                <a href="#products">Products</a> |
+                <a href="About.html">About Us</a> |
+                <a href="#location">Location</a> |
+                <a href="Our Services.html">Services</a> |
+                <a href="Blog.html">Blog</a> |
+                <a href="C:\Users\Kelvin\Downloads\Documents\APEX CONTRUCTION LTD WEBSITE\cntact us apx.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <section class="blog-header">
+    <h2>APEX Insights</h2>
+    <p>Latest news, tips, and design inspirations from the world of construction</p>
+  </section>
+
+  <main>
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" alt="Modern House">
+      <div class="content">
+        <h3>Modern House Design Trends</h3>
+        <p>2025 brings a wave of minimalistic, energy-efficient homes with sleek rooflines and smart materials.</p>
+        <button onclick="toggleContent(this)">Read More →</button>
+        <div class="extra-content" style="display:none;">
+          <p>Architects are embracing simplicity with large glass panels, flat roofing, and open-concept interiors. Materials like bamboo, solar tiles, and recycled metal are being used to build eco-conscious, stunning homes.</p>
+          <p>Want to upgrade your living space? APEX will guide you with designs that blend beauty, function, and future-forward tech.</p>
+          <p>Smart homes are now standard — with integrated lighting, temperature, and security controls all managed through your smartphone. Sustainability is no longer optional but essential.</p>
+          <p>We also see increased use of biophilic design — connecting people with nature through indoor gardens, natural lighting, and ventilation.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Construction Site">
+      <div class="content">
+        <h3>Foundation Mistakes to Avoid</h3>
+        <p>A solid foundation is key. We highlight common construction errors that can cost millions.</p>
+        <button onclick="toggleContent(this)">Read More →</button>
+        <div class="extra-content" style="display:none;">
+          <p>Poor soil testing, improper leveling, and ignoring moisture control are major risks. These can lead to cracks, instability, and even total collapse.</p>
+          <p>At APEX, we conduct comprehensive site analysis and adhere to strict building codes to avoid these pitfalls from the start.</p>
+          <p>Another common mistake is using low-quality concrete or not allowing proper curing time. These reduce strength and durability.</p>
+          <p>Always remember: a building is only as strong as its foundation. Let our experienced engineers help you build from the ground up — the right way.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1599423300746-b62533397364" alt="Planning">
+      <div class="content">
+        <h3>Planning Your Dream Home</h3>
+        <p>From blueprints to breaking ground, APEX guides you each step of the way.</p>
+        <button onclick="toggleContent(this)">Read More →</button>
+        <div class="extra-content" style="display:none;">
+          <p>Our design process starts with your goals. We map out floor plans, electrical layouts, plumbing paths, and structural systems using the latest CAD tools.</p>
+          <p>Then we bring it to life with 3D walkthroughs and cost-efficient timelines tailored to your budget and lifestyle.</p>
+          <p>Our team works closely with you to ensure every room serves a purpose — from your living area down to the lighting in your hallway.</p>
+          <p>We handle permits, approvals, and inspections to give you peace of mind while your dream takes shape.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <img src="C:\Users\Kelvin\Downloads\Documents\APEX CONTRUCTION LTD WEBSITE\f6c0d13e45520fc01e61f7b50341d8de.jpg" alt="Blueprints">
+      <div class="content">
+        <h3>Blueprints: The Backbone of Every Project</h3>
+        <p>Every structure begins with a vision — made real through detailed blueprints.</p>
+        <button onclick="toggleContent(this)">Read More →</button>
+        <div class="extra-content" style="display:none;">
+          <p>Blueprints are more than sketches — they include exact measurements, materials, and build logic.</p>
+          <p>APEX ensures blueprints are accurate, compliant, and easy to execute using tools like AutoCAD and Revit. Your dream, clearly drawn and expertly built.</p>
+          <p>Good blueprints prevent confusion on-site and reduce costly mistakes. They help every team member — from electricians to masons — know exactly what to do.</p>
+          <p>Whether you're building a home, office, or mall, our blueprint service gives your project the clarity it needs to succeed.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 APEX Construction Company. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleContent(btn) {
+      const content = btn.nextElementSibling;
+      const isVisible = content.style.display === 'block';
+      content.style.display = isVisible ? 'none' : 'block';
+      btn.textContent = isVisible ? 'Read More →' : 'Read Less ←';
+    }
+  </script>
+</body>
+</html>
