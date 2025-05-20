@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | APEX Construction</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: rgba(0, 0, 0, 0.8);
+            background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGJsdXJ8ZW58MHx8fHwxNjg3NTY5NzA1&ixlib=rb-4.0.3&q=80&w=1080');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #ffd77c;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: gold;
+            text-decoration: underline;
+            padding-left: 20px;
+            padding-right: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.8);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 60px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 50px;
+            color: #ffcc70;
+            letter-spacing: 2px;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .service-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            min-width: 260px;
+            max-width: 300px;
+            flex: 1;
+            backdrop-filter: blur(8px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-box h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #ffe69a;
+        }
+
+        .service-box p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 32px;
+            }
+            .services {
+                flex-direction: column;
+                align-items: center;
+            }
+            .navbar a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="C:\Users\Kelvin\Downloads\Documents\APX CONS LTD.htm">Home</a> |
+        <a href="C:\Users\Kelvin\Downloads\Documents\APEX CONTRUCTION LTD WEBSITE\portfolio.html">Portfolio</a> |
+        <a href="#products">Products</a> |
+        <a href="C:\Users\Kelvin\Downloads\Documents\APEX CONTRUCTION LTD WEBSITE\about APX CONT.html">About us</a> |
+        <a href="#location">Location</a> |
+        <a href="C:\Users\Kelvin\Downloads\Documents\APEX CONTRUCTION LTD WEBSITE\OUR SERVICES APX C.LTD.html">Services</a> |
+        <a href="C:\Users\Kelvin\Downloads\Documents\APEX CONTRUCTION LTD WEBSITE\cntact us apx.html">Contact</a>
+    </div>
+
+    <div class="overlay">
+        <h2>OUR SERVICES</h2>
+
+        <div class="services">
+            <div class="service-box">
+                <h3>🏠 Residential Construction</h3>
+                <p>We build high-quality homes, apartments, and villas tailored to your needs.</p>
+            </div>
+            <div class="service-box">
+                <h3>🏢 Commercial Construction</h3>
+                <p>From offices to malls, we handle large-scale commercial developments professionally.</p>
+            </div>
+            <div class="service-box">
+                <h3>🔨 Renovations & Remodeling</h3>
+                <p>Transform your space with modern finishes, smarter layouts, and fresh style.</p>
+            </div>
+            <div class="service-box">
+                <h3>📊 Architectural Design</h3>
+                <p>Creative, functional, and sustainable designs that bring your vision to life.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
