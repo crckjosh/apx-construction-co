@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="APEX Construction - We build modern, luxurious, and sustainable homes with precision and passion." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://yourusername.github.io/apex-construction-site" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>APEX Construction</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -31,13 +28,103 @@
       color: inherit;
     }
 
+    /* Container for Sections */
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Styling for each section */
+.section {
+  padding: 80px 0;
+  background-color: #1e1e1e;
+  color: #fff;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-header h2 {
+  font-size: 3rem;
+  color: #D9A02B;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section-header h2::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #D9A02B;
+  border-radius: 10px;
+}
+
+.section-header p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  font-weight: 300;
+  color: #ccc;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+
+/* Specific Section Backgrounds (if needed for variations) */
+.mission {
+  background-color: #2d2d2d;
+}
+
+.about-us {
+  background-color: #3c3c3c;
+}
+
+.dedication {
+  background-color: #1e1e1e;
+}
+
+
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 40px;
-      background-color: #121212;
-      flex-wrap: wrap;
+      padding: 40px 80px;
+      background-color: none;
+      box-shadow: 0 5px 15px none;
     }
 
     header img {
@@ -45,73 +132,213 @@
     }
 
     header h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
+      font-weight: 700;
       color: #D9A02B;
+      letter-spacing: 2px;
     }
 
     .navbar {
       display: flex;
       gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 10px;
+      position: relative;
     }
 
     .navbar a {
       color: #D9A02B;
       font-size: 1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
     }
 
     .navbar a:hover {
       color: #fff;
+      padding-bottom: 5px;
       border-bottom: 2px solid #D9A02B;
     }
 
+   /* General dropdown styling */
+.navbar-item {
+  position: relative;
+}
+
+.dropdown-menu {
+  display:block;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.navbar-item:hover .dropdown-menu .dropdown-item{
+  display: block;
+}
+
+/* Dropdown item styling */
+.dropdown-item {
+  margin: 5px 0;
+  padding: 10px;
+  position: relative;
+  display: contents;
+}
+
+.dropdown-item:hover .dropdown-content {
+  display: block;
+}
+
+/* Content inside each dropdown item */
+.dropdown-content {
+  display: block; /* Hidden by default */
+  margin-top: 5px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.dropdown-content p {
+  font-size: 14px;
+  color: #333;
+}
+
+.dropdown-content img {
+  width: 100px;
+  height: auto;
+  margin-top: 10px;
+  display: block;
+}
+
+/* Optional: You can add hover effects on the items if needed */
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+
     .hero-section {
-      background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080') center/cover no-repeat;
-      height: 500px;
+      height: 600px;
+      background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=1080&q=80');
+      background-size: cover;
+      background-position: center;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 20px;
+      color: #fff;
+      position: relative;
+      box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.6);
     }
 
     .hero-section h2 {
-      font-size: 2rem;
-      color: #fff;
+      font-size: 3rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .hero-section p {
+      font-size: 1.25rem;
+      margin-top: 10px;
+      font-weight: 300;
     }
 
     .btn-primary {
       background-color: #D9A02B;
-      padding: 10px 20px;
+      padding: 15px 30px;
+      border-radius: 50px;
+      color: #121212;
+      font-size: 1.1rem;
+      font-weight: 600;
       border: none;
-      border-radius: 30px;
-      font-weight: bold;
       cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 20px;
     }
 
+    .btn-primary:hover {
+      background-color: #C27D1B;
+    }
+
+    /* Portfolio Section */
     .portfolio-section {
-      padding: 40px;
-      background-color: #1e1e1e;
+      position: fixed;
+      overflow: none;
+      top: 0;
+      left: -50%;
+      width: 50%;
+      height: 100%;
+      background-color: none;
+      padding: 60px 40px;
+      overflow-y: auto;
+      transition: left 0.5s ease;
+      z-index: 999;
+    }
+
+    .portfolio-link:hover ~ .portfolio-section,
+    .portfolio-section:hover {
+      left: 0;
+    }
+
+    .portfolio-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color:white;
+      margin-bottom: 40px;
     }
 
     .portfolio-gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
     }
 
     .portfolio-item img {
       width: 100%;
-      border-radius: 10px;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .portfolio-item h3 {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: 600;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     }
 
     footer {
-      text-align: center;
-      padding: 30px;
       background-color: #121212;
+      color: #fff;
+      padding: 60px 80px;
+      text-align: center;
     }
 
+    footer a {
+      color: #D9A02B;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    /* Contact Modal */
     .modal {
       display: none;
       position: fixed;
@@ -119,113 +346,327 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      justify-content: center;
-      align-items: center;
+      background-color: rgba(0, 0, 0, 0.8);
       z-index: 1000;
     }
 
     .modal-content {
-      background: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
       color: #121212;
-      padding: 30px;
+      padding: 40px;
       border-radius: 10px;
+      max-width: 600px;
       width: 90%;
-      max-width: 500px;
-      position: relative;
     }
 
-    .modal-content form input,
-    .modal-content form textarea {
+    .modal-content h3 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    .modal-content input,
+    .modal-content textarea {
       width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      color: #333;
     }
 
-    .modal-content form button {
+    .modal-content button {
+      width: 100%;
+      padding: 15px;
       background-color: #D9A02B;
-      color: #fff;
       border: none;
-      padding: 10px;
-      width: 100%;
-      border-radius: 5px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      color: #fff;
       cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .modal-content button:hover {
+      background-color: #C27D1B;
     }
 
     .close-btn {
       position: absolute;
       top: 10px;
-      right: 15px;
-      font-size: 1.5rem;
+      right: 20px;
+      font-size: 1.8rem;
+      color: #070707;
       cursor: pointer;
-      color: #121212;
     }
+    .dropdown {
+  position: relative;
+  display: inline-block;
+}
 
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #2c2c2c;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  min-width: 260px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
 
-      .hero-section h2 {
-        font-size: 1.5rem;
-      }
-    }
+.dropdown-menu li {
+  margin-bottom: 12px;
+}
+
+.dropdown-menu li:last-child {
+  margin-bottom: 0;
+}
+
+.dropdown-menu li a {
+  color: #f8f8f8;
+  text-decoration: none;
+  display: block;
+  padding: 6px 10px;
+  border-radius: 5px;
+  transition:  0.2s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #444;
+}
+
+.dropdown-menu li a span {
+  font-size: 0.85em;
+  color: #ccc;
+  display: block;
+  margin-top: 2px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
   </style>
 </head>
 <body>
-  <header>
-    <img src="https://yourusername.github.io/apex-construction-site/logo.png" alt="APEX Logo">
+
+  <!-- Header -->
+  <header style="background-color: rgba(169, 169, 169, 0.555)">
+    <img src="C:\Users\Kelvin\Downloads\Documents\APEX CONTRUCTION LTD WEBSITE\image.svg" alt="APEX Construction Logo">
     <h1>APEX Construction</h1>
-    <nav class="navbar">
-      <a href="#">Home</a>
-      <a href="#">Portfolio</a>
-      <a href="#" onclick="document.getElementById('contactModal').style.display='flex'">Contact</a>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <a href="apx construction co.html">Home</a>
+      <a href="Portfolio.html" class="portfolio-link">Portfolio</a>
+      <a href="Blog.html">Blog</a>
+      <div class="navbar-item" tabindex="0" aria-haspopup="true" aria-expanded="false">
+
+      
+        <!-- Residential Service -->
+         <menu>
+        <div class="navbar-item">
+             <a href="Our Services.html">Services</a>
+             <div class="dropdown-menu">
+               <!-- Residential Service -->
+               <div class="dropdown-item">
+                 <a href="#">Residential Construction</a>
+                 <div class="dropdown-content">
+                   <p>We build dream homes with care and precision.</p>
+                   <img src="data:image/jpeg;base64,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" alt="A modern house under construction with scaffolding" />
+                 </div>
+               </div>
+           
+               <!-- Commercial Service -->
+               <div class="dropdown-item">
+                 <a href="#">Commercial Construction</a>
+                 <div class="dropdown-content">
+                   <p>High-quality construction for commercial spaces.</p>
+                   <img src="commercial-image.jpg" alt="A large commercial building with glass windows and a crane" />
+                 </div>
+               </div>
+           
+               <!-- Renovations -->
+               <div class="dropdown-item">
+                 <a href="#">Renovations</a>
+                 <div class="dropdown-content">
+                   <p>Transforming existing structures into new works of art.</p>
+                   <img src="renovation-image.jpg" alt="A worker renovating a room, with exposed brick walls and construction tools" />
+                 </div>
+               </div>
+             </div>
+           </div>
+           
+         </div>
+       </div>
+       
+        <li class="dropdown">
+          <a href="#">About Us</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#our-story">
+                <strong>Our Story</strong><br>
+                <span>Learn how APEX Construction grew from a small dream to a trusted brand.</span>
+              </a>
+            </li>
+            <li>
+              <a href="#our-team">
+                <strong>Our Team</strong><br>
+                <span>Meet the skilled professionals behind our projects.</span>
+              </a>
+            </li>
+            <li>
+              <a href="#mission-vision">
+                <strong>Mission & Vision</strong><br>
+                <span>Discover our goals and what drives our success.</span>
+              </a>
+            </li>
+            <li>
+              <a href="#why-choose-us">
+                <strong>Why Choose Us</strong><br>
+                <span>Find out what sets us apart in the construction industry.</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        
+      
+      <a href="#contact" onclick="openModal()" role="button" aria-haspopup="dialog" aria-controls="contactModal">Contact</a>
     </nav>
   </header>
 
+  <!-- Hero -->
   <section class="hero-section">
-    <h2>Building Tomorrow's Homes, Today</h2>
+    <div>
+      <h2>Your Dream Home, Built to Perfection</h2>
+      <p>Transforming spaces with expertise and elegance.</p>
+      <button class="btn-primary" onclick="window.location.href='#portfolio'">See Our Work</button>
+    </div>
   </section>
 
-  <section class="portfolio-section">
-    <h2>Our Projects</h2>
+  <!-- Portfolio -->
+  <section id="portfolio" class="portfolio-section">
+    <h2>Our Portfolio</h2>
     <div class="portfolio-gallery">
       <div class="portfolio-item">
-        <img src="https://via.placeholder.com/300x200" alt="Project 1" />
+        <img src="https://images.unsplash.com/photo-1512313921743-96a12d7d7993?auto=format&fit=crop&w=1080&q=80" alt="Luxury Villa built by APEX Construction">
+        <h3>Luxury Villa</h3>
       </div>
       <div class="portfolio-item">
-        <img src="https://via.placeholder.com/300x200" alt="Project 2" />
+        <img src="https://images.unsplash.com/photo-1562907102-55b013da6d21?auto=format&fit=crop&w=1080&q=80" alt="Modern apartment complex with smart design">
+        <h3>Modern Apartments</h3>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1080&q=80" alt="Residential family home with landscaped garden">
+        <h3>Family Home</h3>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1080&q=80" alt="Interior renovation showcasing modern design and lighting">
+        <h3>Interior Renovation</h3>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1600585152930-531dc1573f5b?auto=format&fit=crop&w=1080&q=80" alt="Commercial building developed by APEX Construction">
+        <h3>Commercial Space</h3>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 APEX Construction. All rights reserved.</p>
+    <p>&copy; 2025 APEX Construction</p>
+    <p><a href="mailto:info@apexconstruction.com">info@apexconstruction.com</a></p>
   </footer>
 
-  <div class="modal" id="contactModal">
+  <!-- Contact Modal -->
+  <div id="contactModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
     <div class="modal-content">
-      <span class="close-btn" onclick="document.getElementById('contactModal').style.display='none'">&times;</span>
-      <h2>Contact Us</h2>
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <span class="close-btn" onclick="closeModal()" aria-label="Close contact form">&times;</span>
+      <h3 id="contactTitle">Contact Us</h3>
+      <form>
+        <input type="text" placeholder="Your Name" required aria-label="Your Name">
+        <input type="email" placeholder="Your Email" required aria-label="Your Email">
+        <textarea placeholder="Your Message" required aria-label="Your Message"></textarea>
         <button type="submit">Send Message</button>
       </form>
     </div>
   </div>
 
   <script>
-    window.onclick = function(event) {
-      var modal = document.getElementById('contactModal');
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
+    function openModal() {
+      document.getElementById('contactModal').style.display = 'block';
     }
+
+    function closeModal() {
+      document.getElementById('contactModal').style.display = 'none';
+    }
+
+    document.querySelectorAll('.navbar-item').forEach(item => {
+      item.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          const dropdown = item.querySelector('.dropdown-menu');
+          dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+          item.setAttribute('aria-expanded', dropdown.style.display === 'block');
+          e.preventDefault();
+        }
+      });
+    });
   </script>
+
+<script>
+  const portfolioLink = document.querySelector('.portfolio-link');
+  const portfolioPanel = document.querySelector('.portfolio-section');
+
+  portfolioLink.addEventListener('mouseenter', () => {
+    portfolioPanel.style.left = '0';
+  });
+
+  portfolioLink.addEventListener('mouseleave', () => {
+    setTimeout(() => {
+      if (!portfolioPanel.matches(':hover')) {
+        portfolioPanel.style.left = '-50%';
+      }
+    }, 300);
+  });
+
+  portfolioPanel.addEventListener('mouseleave', () => {
+    portfolioPanel.style.left = '-50%';
+  });
+</script>
+
+  
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('.section-header p');
+        sections.forEach((section, index) => {
+          section.style.animationDelay = `${index * 0.5}s`;
+        });
+      });
+    </script>
+
+    <script>
+      const seeWorkButton = document.querySelector('.btn-primary');
+const portfolioSection = document.querySelector('.portfolio-section');
+
+seeWorkButton.addEventListener('click', () => {
+  // Toggle the visibility of the portfolio section
+  const currentLeft = portfolioSection.style.left;
+  if (currentLeft === '0px') {
+    portfolioSection.style.left = '-50%';
+  } else {
+    portfolioSection.style.left = '0';
+  }
+});
+
+    </script>
 </body>
 </html>
